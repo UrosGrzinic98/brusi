@@ -37,7 +37,11 @@
 
 Če je razred omrežja prevelik, se lahko deli na podomrežja (varnost).
 
+<<<<<<< HEAD
+**Postopek:** del bitov za naslov naprave se prepusti naslovu omrežja, s tem se omrežje poveča (možjih je več omrežij), po drugi strani pa se zmanjša število naprav v podomrežju.
+=======
 Postopek: del bitov za naslov naprave se prepusti naslovu omrežja, s tem se omrežje poveča (možjih je več omrežij), po drugi strani pa se zmanjša število naprav v podomrežju.
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 ![slika]()
 
@@ -126,6 +130,15 @@ Primer usmerjevalnega algoritma: Dijksta?
 
 ### Algoritem Dijksta
 
+<<<<<<< HEAD
+1. **korak:** Začetno vozlišče nastavimo na 0, vsa ostala vozlišča nastavimo na neskončno
+
+![Djiksta diagram 1][djiksta-1]
+
+2. **korak:** Na vsakem koraku pogledamo vse poti iz začetnega vozlišča
+
+3. **korak:** Pot nadaljujemo v vozlišču, ki ima najmanjšo vrednost, v primeru, da obstajata dve vozlišči ali več z enakimi vrednostmi je izbira poljubna.
+=======
 1. korak: Začetno vozlišče nastavimo na 0, vsa ostala vozlišča nastavimo na neskončno
 
 > slika
@@ -137,6 +150,7 @@ Primer usmerjevalnega algoritma: Dijksta?
 3. korak: Pot nadaljujemo v vozlišču, ki ima najmanjšo vrednost, v primeru, da obstajata dve vozlišči ali več z enakimi vrednostmi je izbira poljubna.
 
 > slika
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 > vaja
 
@@ -160,7 +174,11 @@ Linijski sloj je implementiran v mrežni kartici. Večina storitev, ki jih linij
 
 Je najenostavnejša oblika napak. Obstajata soda in liha parnost. Pri **sodi parnosti** pošiljatelj vrednost dodanega bita določi tako, da je skupno število bitov z vrednostjo 1 sodo.
 
+<<<<<<< HEAD
+Zgled:
+=======
 Zgled: 
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 ![parnost slika 1][parnost-img-1] ![parnost slika 2][parnost-img-2]
 
@@ -184,9 +202,15 @@ Primer:
 
 ![kontrolni biti računanje][cont-biti]
 
+<<<<<<< HEAD
+2. **Izračun enostavne kontrolne vsote**
+3. **Izračun internetne kontrolne vsote** (izračun kontrolnih bitov na transportnem sloju)
+4. **CRC koda**
+=======
 1. **Izračun enostavne kontrolne vsote**
 2. **Izračun internetne kontrolne vsote** (izračun kontrolnih bitov na transportnem sloju)
 3. **CRC koda**
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 
 <br><br>
@@ -232,6 +256,18 @@ Vsaka naprava ima v **svojem spominu ARP tabelo**, ki vsebuje **IP naslove**, pr
 
 > VAJA: zapišite ARP tabele naprave C
 
+<<<<<<< HEAD
+|     IP naslov     |     MAC naslov      |
+| ----------------- | ------------------- |
+| `222.222.222.220` | `1A-23-F9-CD-06-9B` |
+| `222.222.222.223` | `5C-66-AB-90-70-B1` |
+| `222.222.222.222` | ``                  |
+| `222.222.222.221` | `88-B2-2F-54-1A-OF` |
+
+<br>
+
+Naprava katere IP naslov je `222.222.222.220` želi poslati datagram napravi z naslovom `222.222.222.222`. Ker tabela ne vsebuje zapisa o pripadajočem MAC naslovu, ARP protokol pošlje **ARP paket** (zahteva po MAC naslovu na podlagi IP naslova prejemnika).
+=======
 | IP naslov | MAC naslov |
 |---|---|
 |`222.222.222.220`|`1A-23-F9-CD-06-9B`|
@@ -242,6 +278,7 @@ Vsaka naprava ima v **svojem spominu ARP tabelo**, ki vsebuje **IP naslove**, pr
 <br>
 
 Naprava katere IP naslov je `222.222.222.220` želi poslati datagram napravi z naslovom `222.222.222.222`. Ker tabela ne vsebuje zapisa o pripadajočem MAC naslovu, ARP protokol pošlje **ARP paket** (zahteva po MAC naslovu na podlagi IP naslova prejemnika). 
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 **ARP zahteva:**
 
@@ -275,7 +312,11 @@ Potem zapiše v svojo ARP tabelo in potem pošlje normalno zahtevo
 
 ### Pošiljanje v drugo omrežje
 
+<<<<<<< HEAD
+> slika
+=======
 > slika 
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 Naprava katere IP naslov je `111.111.111.111` želi poslati datagram napravi z IP naslovom `222.222.222.222`. Naprava **pogleda v svojo ARP tabelo**, katera ne vsebuje podatka o napravi z IP naslovom `222.222.222.222` (**napravi nista v istem omrežju**), zato **datagram pošlje na usmerjevalnik:**
 
@@ -290,8 +331,11 @@ Naprava katere IP naslov je `111.111.111.111` želi poslati datagram napravi z I
 
 ### Topologija omrežja (zgradba)
 
+<<<<<<< HEAD
+=======
 ![Topologije omrežja][topologije]
 
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 Poznamo štiri glavne topologije:
 - **Vodilo** (hrbtenica)
 - **Zvezda**
@@ -342,7 +386,11 @@ Poznamo štiri glavne topologije:
 
 ### Polna
 
+<<<<<<< HEAD
+![Polno povezana topologija - mesh][polna]
+=======
 > slika 
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 
 V primeru preobremenitve na določeni povezavi (poškodba...) se poišče druga pot do prejemnika.
 
@@ -373,10 +421,19 @@ V primeru preobremenitve na določeni povezavi (poškodba...) se poišče druga 
 [liho-img-1]: https://res.cloudinary.com/solamona/image/upload/v1536877327/zvs/sts-kp/rac/5l/uiks/liho-slika-1.svg
 [liho-img-2]: https://res.cloudinary.com/solamona/image/upload/v1536877457/zvs/sts-kp/rac/5l/uiks/liho-slika-2.svg
 [cont-biti]: https://res.cloudinary.com/solamona/image/upload/v1536918837/zvs/sts-kp/rac/5l/uiks/kontrolni-biti-diagram.svg
+<<<<<<< HEAD
+=======
 [topologije]: https://res.cloudinary.com/solamona/image/upload/v1536938981/zvs/sts-kp/rac/5l/uiks/topologije.png
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
 [vodilo]: https://res.cloudinary.com/solamona/image/upload/v1536939300/zvs/sts-kp/rac/5l/uiks/vodilo.gif
 [zvezda]: https://res.cloudinary.com/solamona/image/upload/v1536939433/zvs/sts-kp/rac/5l/uiks/zvezda.gif
 [obroc]: https://res.cloudinary.com/solamona/image/upload/v1536939850/zvs/sts-kp/rac/5l/uiks/obroc.gif
 [unicast]: https://res.cloudinary.com/solamona/image/upload/v1536942926/zvs/sts-kp/rac/5l/uiks/unicast.png
 [multicast]: https://res.cloudinary.com/solamona/image/upload/v1536942928/zvs/sts-kp/rac/5l/uiks/multicast.png
 [broadcast]: https://res.cloudinary.com/solamona/image/upload/v1536942927/zvs/sts-kp/rac/5l/uiks/broadcast.png
+<<<<<<< HEAD
+[polna]: https://res.cloudinary.com/solamona/image/upload/v1536945488/zvs/sts-kp/rac/5l/uiks/polno-povezana-topologija.gif
+[djiksta-1]: https://res.cloudinary.com/solamona/image/upload/v1536960272/zvs/sts-kp/rac/5l/uiks/Dijkstra_Animation.gif
+[djiksta-2]: https://res.cloudinary.com/solamona/image/upload/v1536960307/zvs/sts-kp/rac/5l/uiks/djiksta-2.gif
+=======
+>>>>>>> 2be7ec6470f6f63fc093c4d8b458ba5b3573e868
