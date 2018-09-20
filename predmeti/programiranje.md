@@ -108,3 +108,219 @@ Public static void main(String[] args){
     // code goes here :)
 }
 ```
+
+
+---
+
+nadaljevanje - treba mergat oz transitionat na lepo
+
+---
+
+#### Nadaljevanje
+
+- `\t` tabulator
+- `\n` nova vrstica
+- `\'` izpis enojnega narekovaja
+- `\''` izpis dvojnega narekovaja
+- `\\` izpis backslash-a (leve poševnice)
+
+#### Komentarji
+
+- `//` do konca vrstice se ne upošteva kot program
+- `/* vse vrstice tu vmes se ne upoštevajo kot program */`
+
+```
+//System.out.println("Danes je "lep"dan");
+System.out.println("Danes je lep dan");
+/*System.out.println(""-to je dvojni narekovaj);
+System.out.println()*/
+```
+<br>
+
+### Vnašanje podatkov
+
+#### Vnos z argumenti
+```
+public statuc void main(String[]args)
+```
+
+`args` - tabela, ki shranjuje vhodne podatke
+```
+java imePrograma 1756 2347
+```
+`imePrograma` - zagon programa
+`1756` - prvi podatek
+`2347` - drugi podatek
+
+#### Razred scanner
+
+- najprej ga uvozimo: `import java.util.Scanner;`
+- v programu:
+```
+System.out.println("Vpiši podatek");
+Scanner podatek = new Scanner(System.in);
+String  spremenljivka = podatek.next();
+String spremenljivka = podatek.nextLine();
+podatek.close();
+```
+`podatek.next()` je za eno besedo
+`podatek.nextLine()` pa za več besed
+
+- kje je podatek?
+	- v spremenljivki spremenljivka
+	- tip podatka je String (niz)
+
+#### Razred bufferedReader
+- `iport java.io.*`
+- `public static void main(String[] args) throws IOException`
+```
+system.out.println("Vpiši podatek");
+BufferedReader podatek = new BufferedReader(new InputStreamReader(System.in));
+String spremenljivka = podatek.readLine();
+podatek.close();
+```
+
+<br>
+
+### Generiranje naključnega števila
+
+- `Math.random()` - vrača decimalne vrednosti med0 in 1 (0,999...)
+- Kaj vrača spodnji stavek?
+
+```
+int x = (int)(Math.random()*7)
+```
+> nevem
+- in naslednji stavek?
+
+
+```
+int x = (int)(Math.random()*6+5)
+```
+> tudi  nevem
+
+<br>
+
+### Pretvorbe med tipi
+
+- pri vnosu podatkov - ponavadi iz String v int, long, double, float
+- med izvajanjem programa - med številskimi tipi ali pri tvorjenju niza številk
+- iz String v int
+	- `Integer.parseInt(spremelnjivka)`
+- iz int v String
+	- `Integer.toString(spremelnjivka)`
+- iz String v Double
+	- `Double.valueOf(spremelnjivka).doubleValue()`
+- Double v String
+	- `Double.toString(spremelnjivka)`
+- ostali tipi (ne String) v int
+	- `(int)spremelnjivka`
+
+
+<br>
+
+### Primerjalni operatorji
+
+- pri preverjanju pogojev (pogojni stavki, zanke)
+
+| znak | pogoj | primer |
+|---|---|---|
+| `>` | večje  | `a>b` |
+| `>=` | večje ali enako | `a>=b` |
+| `<` | manjše  | `a<b` |
+| `<=` | manjše ali neenako | `a<=b` |
+| `==` | enako  | `a==b` |
+| `!=` | ni enako | a!=b` |
+
+- če preverjamo več pogojev
+
+| znak | pogoj | primer |
+|---|---|---|
+| `&&` | IN (AND)| `a==b && b<c` |
+| `||` | ALI (OR) | `a==b || b<c` |
+
+<br>
+
+### Pogojni stavek
+#### if
+
+- preveri izpolnjenost pogoja ali več pogojev (primerja vrednosti spremenljivk)
+
+> slika logike pogojnega stavka
+
+```
+if (pogoj) {
+	stavek ali več stavkov
+}
+```
+#### if else
+
+> slika logike if elsa
+```
+if (pogoj) {
+	stavek ali več stavkov
+} else {
+	stavek ali več stavkov
+}
+```
+#### if else if else
+
+> slika logike if else if elsa
+```
+if (pogoj) {
+	stavek ali več stavkov
+} else if (pogoj) {
+	stavek ali več stavkov
+} else {
+	stavek ali več stavkov
+}
+```
+
+#### if na kratko
+
+```
+(pogoj) ? čeJePogojIzpolnjen:čePogojNiIzpolnjen
+```
+
+Primer:
+
+```
+int a = 5;
+int b = 3;
+int x = (a>b) ? a:b;
+System.out.println(x);
+```
+
+#### Switch
+
+- Primerjamo vrednost spremenljivke s konstanto - uporaben, če so vrednosti spremenljivke pričakovane
+
+```
+switch (spremenljivka) {
+case vrednost1:
+	stavki;
+break;
+case vrednost2:
+	stavki;
+break;
+.
+.
+.
+case vrednostN:
+	stavki;
+break;
+default:
+	stavki;
+}
+```
+
+> to treba malo lepše razložit
+
+> DN: simulacija meta (bacanja) kock - zaženeš program in izpiše pattern od kocke iz * 
+
+```
+* *   * *
+* *    *
+* *   * *
+```
+>  in tko naprej
