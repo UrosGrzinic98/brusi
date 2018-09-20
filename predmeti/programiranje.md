@@ -103,7 +103,7 @@ Prevajalnik program ki prevede izvorno kodo nekega programskega jezika v strojno
 
 **GLAVNA METODA**: 
 
-```JavaScript
+```javascript
 Public static void main(String[] args){ 
     // code goes here :)
 }
@@ -129,7 +129,7 @@ nadaljevanje - treba mergat oz transitionat na lepo
 - `//` do konca vrstice se ne upošteva kot program
 - `/* vse vrstice tu vmes se ne upoštevajo kot program */`
 
-```
+```javascript
 //System.out.println("Danes je "lep"dan");
 System.out.println("Danes je lep dan");
 /*System.out.println(""-to je dvojni narekovaj);
@@ -140,14 +140,16 @@ System.out.println()*/
 ### Vnašanje podatkov
 
 #### Vnos z argumenti
-```
+```javascript
 public statuc void main(String[]args)
 ```
 
 `args` - tabela, ki shranjuje vhodne podatke
-```
+
+```javascript
 java imePrograma 1756 2347
 ```
+
 `imePrograma` - zagon programa
 `1756` - prvi podatek
 `2347` - drugi podatek
@@ -156,13 +158,15 @@ java imePrograma 1756 2347
 
 - najprej ga uvozimo: `import java.util.Scanner;`
 - v programu:
-```
+
+```javascript
 System.out.println("Vpiši podatek");
 Scanner podatek = new Scanner(System.in);
 String  spremenljivka = podatek.next();
 String spremenljivka = podatek.nextLine();
 podatek.close();
 ```
+
 `podatek.next()` je za eno besedo
 `podatek.nextLine()` pa za več besed
 
@@ -171,9 +175,11 @@ podatek.close();
 	- tip podatka je String (niz)
 
 #### Razred bufferedReader
+
 - `iport java.io.*`
 - `public static void main(String[] args) throws IOException`
-```
+
+```javascript
 system.out.println("Vpiši podatek");
 BufferedReader podatek = new BufferedReader(new InputStreamReader(System.in));
 String spremenljivka = podatek.readLine();
@@ -187,14 +193,14 @@ podatek.close();
 - `Math.random()` - vrača decimalne vrednosti med0 in 1 (0,999...)
 - Kaj vrača spodnji stavek?
 
-```
+```javascript
 int x = (int)(Math.random()*7)
 ```
 > nevem
 - in naslednji stavek?
 
 
-```
+```javascript
 int x = (int)(Math.random()*6+5)
 ```
 > tudi  nevem
@@ -248,7 +254,7 @@ int x = (int)(Math.random()*6+5)
 
 > slika logike pogojnega stavka
 
-```
+```javascript
 if (pogoj) {
 	stavek ali več stavkov
 }
@@ -256,7 +262,7 @@ if (pogoj) {
 #### if else
 
 > slika logike if elsa
-```
+```javascript
 if (pogoj) {
 	stavek ali več stavkov
 } else {
@@ -266,7 +272,7 @@ if (pogoj) {
 #### if else if else
 
 > slika logike if else if elsa
-```
+```javascript
 if (pogoj) {
 	stavek ali več stavkov
 } else if (pogoj) {
@@ -278,13 +284,13 @@ if (pogoj) {
 
 #### if na kratko
 
-```
+```javascript
 (pogoj) ? čeJePogojIzpolnjen:čePogojNiIzpolnjen
 ```
 
 Primer:
 
-```
+```javascript
 int a = 5;
 int b = 3;
 int x = (a>b) ? a:b;
@@ -295,7 +301,7 @@ System.out.println(x);
 
 - Primerjamo vrednost spremenljivke s konstanto - uporaben, če so vrednosti spremenljivke pričakovane
 
-```
+```javascript
 switch (spremenljivka) {
 case vrednost1:
 	stavki;
@@ -318,7 +324,7 @@ default:
 
 > DN: simulacija meta (bacanja) kock - zaženeš program in izpiše pattern od kocke iz * 
 
-```
+```javascript
 * *   * *
 * *    *
 * *   * *
