@@ -76,6 +76,7 @@ KOMOT JE PISAT KODO V [TEMU ONLINE EDITORJU](https://stackedit.io/app#) in pol j
 - [code badges](https://shields.io/#/)
 - [svg minify](https://www.svgminify.com/)
 - [full LaTeX wiki](https://en.wikibooks.org/wiki/LaTeX)
+- [LazyLoad](http://s.muz.li/OTcwYzRkNzg5)
 
 
 [uikst4l]: http://solamona.com/s/sts-kp/rac/4l/uikst.html
